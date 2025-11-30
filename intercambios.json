@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "titulo": "Erasmus+ 2026 - Universidade de Coimbra",
+    "tipo": "Erasmus",
+    "instituicao": "Universidade de Coimbra",
+    "edital": "Edital 01/2026",
+    "descricao": "Programa Erasmus+ para mobilidade de um semestre na Universidade de Coimbra, Portugal.",
+    "docs": "#",
+    "documentos": [
+      "Formulário de candidatura",
+      "Histórico escolar atualizado",
+      "Carta de motivação",
+      "Comprovante de proficiência linguística (se aplicável)",
+      "Cópia do documento de identificação"
+    ],
+    "requisitos": [
+      "Ser aluno regularmente matriculado",
+      "Média mínima 7.0",
+      "Inglês/Português básico-intermediário"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Bilateral - Universidad de Chile",
+    "tipo": "Bilateral",
+    "instituicao": "Universidad de Chile",
+    "edital": "Edital 02/2026",
+    "descricao": "Programa bilateral com a Universidad de Chile para mobilidade acadêmica.",
+    "docs": "#",
+    "documentos": [
+      "Formulário de inscrição",
+      "Histórico escolar",
+      "Carta de recomendação",
+      "Comprovante de matrícula",
+      "Cópia do passaporte (se aplicável)"
+    ],
+    "requisitos": [
+      "Candidatura via NESP",
+      "Documentos acadêmicos atualizados"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Summer Program - Technical University of Munich (TUM)",
+    "tipo": "Programa",
+    "instituicao": "Technical University of Munich",
+    "edital": "Summer 2026",
+    "descricao": "Programa de curta duração com foco em sistemas embarcados e IoT.",
+    "docs": "#",
+    "documentos": [
+      "Formulário de inscrição",
+      "Comprovante de matrícula",
+      "Carta de motivação",
+      "Comprovante de proficiência em inglês"
+    ],
+    "requisitos": [
+      "Bom desempenho acadêmico",
+      "Inglês avançado",
+      "Carta de motivação"
+    ]
+  }
+]

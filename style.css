@@ -1,0 +1,287 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+
+/* --- VARIÁVEIS GLOBAIS --- */
+:root {
+  --cor-click: #126ae2; /* Click */
+  --cor-sombra: #0a599b; /* Azul Escuro */
+  --cor-text: black; /* Preto */
+  --cor-back1: #edf2f4; /* Azul claro */
+  --cor-back2: #6a937a; /* Verde Escuro */
+  
+  --md-sys-color-primary: #126ae2;
+  --frequencia: #126ae2;
+  --nota: #126ae2;
+  --prova: #126ae2;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--cor-back1);
+  font-family: "Arimo", sans-serif;
+}
+
+/* --- HEADER E MENU --- */
+header {
+  position: relative;
+  height: 35px;
+}
+
+#menu {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#logo {
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.svg_logo { width: 80px; }
+.path_logo { fill: var(--cor-click); }
+
+#perfil {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  margin-right: 15px;
+}
+
+#menu_aba {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 10;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.menu_item {
+  position: relative;
+  padding: 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 14pt;
+  color: var(--cor-click);
+  transition: 0.5s;
+  border-bottom: 1px solid #eee;
+}
+
+.menu_panel { background: white; }
+.menu_subitem {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--cor-click);
+  border-bottom: 1px solid #f1f1f1;
+}
+.menu_subitem:hover { background: rgba(0,0,0,0.03); }
+.menu_panel.hidden { display: none; }
+
+/* --- MENSAGENS E CONTAINER PADRÃO --- */
+#mensagens, .container {
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#user_name {
+  display: block;
+  font-size: 17pt;
+  margin-bottom: 10px;
+}
+
+#mns_box {
+  position: relative;
+  margin-top: 5px;
+}
+
+#icon {
+  width: 18px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+#mns {
+  padding: 5px;
+  width: 80%;
+  display: inline-block;
+}
+
+/* --- TIPOGRAFIA E ELEMENTOS --- */
+.material-symbols-outlined {
+  color: var(--cor-click);
+}
+.icoG { font-size: 30px; }
+.icoP { font-size: 18px; }
+
+.font {
+  font-size: 11px;
+  color: var(--cor-text);
+}
+
+h2, h3 {
+  color: var(--cor-text);
+  padding: 0 5px;
+}
+
+p {
+  font-size: 11px;
+  color: var(--cor-text);
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+.titulo_aula {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--cor-text);
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- CARROSSEL --- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.card {
+  min-width: 100%;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.info { padding: 10px; }
+.carousel-btn {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+/* --- BOTÕES E FILTROS --- */
+.tipo-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tipo, .tipo_res {
+  padding: 8px 12px;
+  border-radius: 500px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 11px;
+  color: white;
+}
+.tipo { background-color: var(--frequencia); border: 2px solid transparent; }
+.tipo:hover { opacity: 0.9; }
+.tipo.selected { background-color: #28a745; box-shadow: 0 0 5px rgba(0,0,0,0.3); }
+.tipo_res { background-color: #28a745; border: 2px solid transparent; }
+
+#armarioNumero {
+  display: none;
+  margin: 20px auto 10px;
+  padding: 15px;
+  border-radius: 500px;
+  background-color: var(--frequencia);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+#resultado { margin-top: 15px; white-space: pre-line; }
+
+/* --- ESTILOS MURAL DE VAGAS (NOVA FUNCIONALIDADE) --- */
+.vaga-card {
+  border-left: 5px solid var(--cor-click);
+  background-color: #f8f9fa;
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.vaga-card h3 { margin: 0 0 6px 0; font-size: 14px; color: var(--cor-text); }
+.vaga-card p { margin: 0 4px 6px 0; font-size: 12px; color: var(--cor-text); }
+
+/* --- TABS PARA MURAL / ESTUDANTE --- */
+.tabs { display: flex; gap: 8px; margin: 10px 0 12px 0; }
+.tab-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.02));
+  border: 1px solid rgba(0,0,0,0.07);
+  cursor: pointer;
+  color: var(--cor-text);
+}
+.tab-button.active { background: var(--cor-click); color: white; border-color: rgba(0,0,0,0.08); }
+.tab-content { margin-top: 8px; }
+.hidden { display: none; }
+
+/* Detalhes das vagas */
+.vaga-details {
+  display: none;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0,0,0,0.08);
+}
+.vaga-details.open { display: block; }
+.vaga-card.expanded { background-color: #fffefc; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.vaga-actions { margin-top: 8px; }
+.detalhes-btn, .candidatar-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: white;
+  cursor: pointer;
+}
+.detalhes-btn:hover, .candidatar-btn:hover { opacity: 0.95; }
+
+/* Modal de Candidatura */
+.modal { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; z-index:50; }
+.modal.hidden { display: none; }
+.modal-backdrop { position:absolute; inset:0; background: rgba(0,0,0,0.45); }
+.modal-panel { position:relative; background: white; padding: 18px; border-radius: 8px; width: min(600px, 92%); box-shadow: 0 12px 30px rgba(0,0,0,0.2); z-index:60; }
+.modal-close { position:absolute; right:10px; top:10px; background:transparent; border:none; font-size:16px; cursor:pointer; }
+.modal-panel input[type="text"], .modal-panel input[type="email"], .modal-panel input[type="file"] { display:block; width:100%; margin:6px 0 10px 0; padding:8px; border:1px solid #ddd; border-radius:6px; }
+#file-list { font-size: 12px; color: #333; margin-top:6px; }
+.candidatar-btn { background: var(--cor-click); color: white; border-color: transparent; }
+.candidatar-btn.secondary { background: #eee; color: #333; }
+.modal-panel .secondary { background: #f3f3f3; }
