@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wireframe - IHM App</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--muted:#666;--accent:#126ae2}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);margin:0;color:#222}
+    .page{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .sidebar{background:#fff;border-right:1px solid #e4e7ef;padding:16px}
+    .logo{height:48px;margin-bottom:12px;background:linear-gradient(90deg,#eef 0%,#cff 100%);display:flex;align-items:center;justify-content:center;border-radius:6px}
+    .menu-item{padding:10px;border-radius:6px;margin-bottom:6px;background:transparent;color:var(--muted);cursor:pointer}
+    .menu-item:hover{background:#f0f6ff;color:var(--accent)}
+    .content{padding:20px}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .box{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 0 rgba(30,30,30,0.03);margin-bottom:12px}
+
+    .carousel{height:140px;background:linear-gradient(90deg,#dcefff,#f7f9ff);display:flex;align-items:center;justify-content:center;border-radius:6px}
+    .cols{display:grid;grid-template-columns:1fr 320px;gap:12px}
+
+    .card{background:#fff;border:1px dashed #e6e9f0;padding:12px;border-radius:6px}
+    .vaga-card{padding:10px;border-radius:6px;border:1px solid #eee;margin-bottom:8px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* wireframe knobs */
+    .note{font-size:13px;color:#444;background:#fff;padding:8px;border-radius:6px;border-left:3px solid var(--accent)}
+
+    /* modal preview */
+    .modal-preview{position:fixed;right:20px;bottom:20px;width:300px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.12)}
+    .btn{background:var(--accent);color:#fff;padding:8px 10px;border-radius:6px;border:0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="logo">LOGO</div>
+      <div class="menu-item">Dashboard</div>
+      <div class="menu-item">Oportunidades</div>
+      <div class="menu-item" style="font-weight:600;color:var(--accent)">Intercâmbio</div>
+      <hr style="margin:12px 0;border:none;border-top:1px solid #eef"/>
+      <div class="note">Clique em um menu para navegar. "Intercâmbio" abre a página dedicada.</div>
+    </aside>
+
+    <main class="content">
+      <div class="header">
+        <h1>Wireframe - Mural & Intercâmbio</h1>
+        <div class="small">Versão: r1 • Protótipo</div>
+      </div>
+
+      <div class="box carousel">Carousel (eventos)</div>
+
+      <div class="cols">
+        <section>
+          <div class="box">
+            <h3>Reserva de Armário</h3>
+            <div class="card small">Tipo: Padrão • Duplo • [Reservar]</div>
+          </div>
+
+          <div class="box">
+            <h3>Mural de Oportunidades</h3>
+            <div class="small">Filtros: Todas • Estágio • Emprego</div>
+            <div style="margin-top:8px">
+              <div class="vaga-card">Estagiário Front-end<br/><span class="small">Inatel — Estágio</span></div>
+              <div class="vaga-card">Desenvolvedor Back-end<br/><span class="small">TechCorp — Emprego</span></div>
+              <div class="vaga-card">QA - Estágio<br/><span class="small">SoftLab — Estágio</span></div>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Para Estudantes</h3>
+            <p class="small">Vagas recomendadas e dicas de candidatura.</p>
+          </div>
+        </section>
+
+        <aside>
+          <div class="box">
+            <h3>Intercâmbio (página dedicada)</h3>
+            <p class="small">Acesse a página de intercâmbio para ver todas as instituições e documentos necessários.</p>
+            <div style="margin-top:8px">
+              <div class="card small">Universidade de Coimbra<br/><em class="small">Erasmus+</em></div>
+              <div class="card small">Universidad de Chile<br/><em class="small">Bilateral</em></div>
+              <div class="card small">TUM - Summer Program<br/><em class="small">Programa</em></div>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Notas</h3>
+            <p class="small">Ao selecionar uma instituição, o usuário poderá ver: lista de documentos; marcar horário com NESP; visualizar edital.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="box">
+        <h3>Fluxo de Candidatura</h3>
+        <ol class="small">
+          <li>Usuário abre vaga/intercâmbio</li>
+          <li>Clica em "Candidatar" ou "Marcar NESP"</li>
+          <li>Preenche formulário/Anexa documentos</li>
+          <li>Recebe confirmação: "Aguarde seu email"</li>
+        </ol>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="modal-preview">
+    <strong>Modal NESP</strong>
+    <p class="small">Formulário: nome, e-mail, data/hora preferidos</p>
+    <button class="btn" onclick="alert('Simulação: pedido enviado')">Enviar pedido</button>
+  </div>
+
+</body>
+</html>
